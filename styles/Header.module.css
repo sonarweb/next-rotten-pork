@@ -1,0 +1,21 @@
+.mainContainer{
+  width: 100%;
+  top: 100px;
+  height: 120vh;
+  position: absolute;
+  top: 0  ;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(44, 44, 44);
+}
+
+.title{
+  color: white;
+  position: absolute;
+  bottom: 6rem;
+  margin-top: 110rem;
+}
+
+.paragraph{
+  margin-top: 120rem;
+}

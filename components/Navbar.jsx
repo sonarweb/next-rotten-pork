@@ -1,19 +1,39 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+
 import styles from '../styles/Navbar.module.css'
+
 import Image from 'next/dist/client/image'
 import Link from 'next/link'
+
 import { AiOutlineClose, AiOutlineFacebook, AiOutlineInstagram, AiOutlineMenu, AiOutlineYoutube } from "react-icons/ai";
 import { FaFacebook, FaFacebookF, FaInstagram, FaYoutube, IconName } from "react-icons/fa";
 
 const Navbar = () => {
+    // Nav Toggle
     const [nav, setNav] = useState(false)
     const handleNav = () =>{
         setNav(!nav)
     }
-
+    // Change Nav Color
+    const [color, setColor] = useState(false)
+    const changeColor = () => {
+        if(window.scrollY >= 120){
+            setColor(true)
+        } else{
+            setColor(false)
+        }
+    }
+    
+    //Define window on NextJs
+    useEffect(() => {
+        window.addEventListener('scroll', changeColor)
+      }, []);
+   
   return (
-    <div className={styles.container}>
-        <div className={styles.nav}>
+    
+    <div className={color ? `${styles.navigation} ${styles.navigationBg}` : styles.navigation}>
+        
+        <div className={styles.nav }>
             <Image 
             src='/../public/assets/logo-rotten-pork-white.png'
             alt='/'
