@@ -1,0 +1,14 @@
+.slideContainer{
+    height: 100vh;
+    position: relative;
+}
+
+.imageContainer{
+    height: 100vh;
+    position: relative;
+}
+
+.fadeContainer{
+    height: 100vh;
+    position: relative;
+}
